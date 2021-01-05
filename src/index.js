@@ -40,10 +40,23 @@ function displayTemperature(response) {
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     iconElement.setAttribute("alt", response.data.weather[0].description);   
 }
-let units = "metric";
-let city = "Vienna";
-let apiKey = "f9ff751d51aebe49d1d4211a6af79938"; 
-let apiUrl = 
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+    let units = "metric";
+    let apiKey = "f9ff751d51aebe49d1d4211a6af79938"; 
+    let apiUrl = 
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+    axios.get(apiUrl).then(displayTemperature);
+    }
+
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
+
+search ("Vienna");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
