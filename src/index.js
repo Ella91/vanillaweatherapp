@@ -41,7 +41,7 @@ function displayTemperature(response) {
     iconElement.setAttribute("alt", response.data.weather[0].description);   
 }
 let units = "metric";
-let city = "Madrid";
+let city = "Vienna";
 let apiKey = "f9ff751d51aebe49d1d4211a6af79938"; 
 let apiUrl = 
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
