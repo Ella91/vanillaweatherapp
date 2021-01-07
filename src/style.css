@@ -1,14 +1,15 @@
 body {
-  font-family: arial, sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 h1 {
-  color: #878787;
+  color: #ec6e4c;
   display: block;
   font-size: 24px;
   font-weight: 100;
   line-height: 29px;
-  text-align: left;
+  text-align: center;
+  margin-top: 10px;
   margin-bottom: 0;
 }
 
@@ -24,7 +25,7 @@ li {
   font-size: 16px;
   font-weight: 100;
   line-height: 19px;
-  text-align: left;
+  text-align: center;
 }
 
 li:first-letter {
@@ -40,7 +41,7 @@ li:first-letter {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 5px solid #ec6e4c;
   border-radius: 10px;
 }
 
@@ -75,4 +76,15 @@ li:first-letter {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+.forecast {
+  margin-top: 15px;
+  border: 1px solid #ec6e4c;
+  border-radius: 10px;
+}
+
+.forecast img {
+  height: 64px;
+  width: 64px;
 }
